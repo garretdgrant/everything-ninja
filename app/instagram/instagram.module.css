@@ -53,7 +53,7 @@
   top: 0;
   transform: skewX(-16deg);
   width: 54%;
-  animation: sweep 5.6s ease-in-out 0.8s infinite;
+  animation: sweep 900ms ease-out 0.7s both;
 }
 
 .logoPlate {

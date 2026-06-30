@@ -1,6 +1,8 @@
 const affiliateLinks = {
   "ninja-creami": "https://amzn.to/4eDI4YB",
   "ninja-indoor-grill": "https://amzn.to/4eLGpiw",
+  "ninja-neverdull-knife-set": "https://amzn.to/44CP9CN",
+  "ninja-pods-grounds-coffee-maker": "https://amzn.to/44CP9CN",
 } as const;
 
 type AffiliateSlug = keyof typeof affiliateLinks;

@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
 import Image from "next/image";
+import { bricolage } from "../fonts";
 import InstagramBrowserHint from "./InstagramBrowserHint";
 import styles from "./instagram.module.css";
-
-const bricolage = Bricolage_Grotesque({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Instagram Links | Everything Ninja",
@@ -31,6 +25,22 @@ const productLinks = [
     accent: "bg-[#75d7ff]",
     eyebrow: "Amazon pick",
     mark: "02",
+  },
+  {
+    name: "Ninja NeverDull Knife Set",
+    description: "Kitchen knife set with built-in sharpening storage",
+    href: "/go/ninja-neverdull-knife-set",
+    accent: "bg-[#ff6048]",
+    eyebrow: "Amazon pick",
+    mark: "03",
+  },
+  {
+    name: "Ninja Pods & Grounds Coffee Maker",
+    description: "Single-serve coffee maker for pods and fresh grounds",
+    href: "/go/ninja-pods-grounds-coffee-maker",
+    accent: "bg-[#c7a17a]",
+    eyebrow: "Amazon pick",
+    mark: "04",
   },
 ];
 
@@ -93,8 +103,8 @@ export default function InstagramPage() {
               alt="Everything Ninja logo"
               className="h-auto w-full"
               height={239}
-              priority
-              sizes="(max-width: 430px) 280px, 320px"
+              preload
+              sizes="(max-width: 374px) calc(100vw - 80px), 294px"
               src="/everything-ninja-logo.webp"
               width={1167}
             />
