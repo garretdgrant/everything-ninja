@@ -1,0 +1,108 @@
+.phone {
+  background:
+    linear-gradient(
+      138deg,
+      transparent 0 48%,
+      rgba(215, 255, 69, 0.42) 48% 57%,
+      transparent 57%
+    ),
+    linear-gradient(
+      24deg,
+      transparent 0 68%,
+      rgba(255, 96, 72, 0.28) 68% 76%,
+      transparent 76%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(16, 17, 14, 0.055) 0 1px,
+      transparent 1px 24px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(16, 17, 14, 0.045) 0 1px,
+      transparent 1px 24px
+    ),
+    #eef1ec;
+}
+
+.phone::before {
+  background-image: radial-gradient(
+    rgba(16, 17, 14, 0.12) 0.7px,
+    transparent 0.7px
+  );
+  background-size: 11px 11px;
+  content: "";
+  inset: 0;
+  opacity: 0.32;
+  pointer-events: none;
+  position: absolute;
+}
+
+.phone::after {
+  background: linear-gradient(
+    105deg,
+    transparent 0 42%,
+    rgba(255, 255, 255, 0.44) 42% 46%,
+    transparent 46% 100%
+  );
+  content: "";
+  height: 100%;
+  left: -70%;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: skewX(-16deg);
+  width: 54%;
+  animation: sweep 5.6s ease-in-out 0.8s infinite;
+}
+
+.logoPlate {
+  animation: liftIn 520ms cubic-bezier(0.2, 0.9, 0.22, 1) both;
+}
+
+.linkCard {
+  animation: cardIn 520ms cubic-bezier(0.2, 0.9, 0.22, 1) both;
+}
+
+@keyframes liftIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) rotate(-1.5deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(-0.35deg);
+  }
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sweep {
+  0%,
+  62% {
+    transform: translateX(0) skewX(-16deg);
+  }
+
+  100% {
+    transform: translateX(310%) skewX(-16deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phone::after,
+  .logoPlate,
+  .linkCard {
+    animation: none;
+  }
+}
