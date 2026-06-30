@@ -19,17 +19,17 @@ const productLinks = [
   {
     name: "Ninja Creami",
     description: "Frozen treats, protein ice cream, sorbet, and prep tools",
-    href: "#ninja-creami",
+    href: "/go/ninja-creami",
     accent: "bg-[#d7ff45]",
-    eyebrow: "Creami file",
+    eyebrow: "Amazon pick",
     mark: "01",
   },
   {
     name: "Ninja Indoor Grill",
     description: "Countertop grilling, crisping, and weeknight dinners",
-    href: "#ninja-indoor-grill",
+    href: "/go/ninja-indoor-grill",
     accent: "bg-[#75d7ff]",
-    eyebrow: "Grill file",
+    eyebrow: "Amazon pick",
     mark: "02",
   },
 ];
